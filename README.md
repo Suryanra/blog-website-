@@ -9,6 +9,8 @@ page to register:
 <img width="955" alt="image" src="https://github.com/Suryanra/blog-website-/assets/142992104/3505720f-0392-4d50-9c2e-06e22e7c33be">
 page where you can see othero people blog and you can also share your thoughts(you can only post a blog if you are signin):
 <img width="538" alt="image" src="https://github.com/Suryanra/blog-website-/assets/142992104/49bf5a13-b697-4b2a-9e96-4a204d06530f">
+<img width="324" alt="image" src="https://github.com/Suryanra/blog-website-/assets/142992104/15ef00bc-229a-4a79-a965-954abe265468">
+
 
 
 
