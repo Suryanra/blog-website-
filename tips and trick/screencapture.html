@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            body{
+                  display: flex;
+                  align-items: center;
+                  flex-direction: column;
+
+            }
+            button{
+                  height:80px;
+                  width:200px;
+            }
+            video{
+                  width:100vw;
+                  height:100vh;
+            }
+      
+      </style>
+</head>
+<body>
+      <h1>headingn1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et recusandae unde eius ullam eveniet suscipit inventore consectetur, illum neque voluptas soluta, voluptate iste modi molestias, animi earum aspernatur non nobis pariatur numquam saepe. Eligendi.</p>
+<button>capture</button>
+<video autoplay id="preview"></video>
+
+
+<script>
+const button=document.querySelector('button');
+const previewElem=document.getElementById('preview');
+button.addEventListener('click',async()=>{
+      previewElem.srcObject=await navigator.mediaDevices.getDisplayMedia({
+            video:{cursor:"always"},
+            audio:false,
+      })
+})
+</script>
+</body>
+</html>

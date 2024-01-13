@@ -1,0 +1,255 @@
+==============================>>npm i express mysql2 dotenv hbs nodemon ?
+
+
+
+
+
+
+==============================>>difference between npm i nodemon and npm i --save nodemon:
+As of npm 5.0.0 and later, you can use either npm i nodemon or npm i --save nodemon, and both commands will have the same effect of installing nodemon and updating your package.json file with the dependency.
+
+In modern usage (npm 5.0.0 and newer), you can simply use npm i nodemon to install and save nodemon as a dependency. The --save option is not required, but it won't cause any issues if you include it; npm will just ignore it.
+
+
+
+initiallise in package.json:
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  but i make it :
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+
+  now if we write npm start it will run:nodemon app.js in my backend 
+
+
+
+  =================================>In the package.json file, there is a "scripts" section. This section allows you to define various scripts that
+   can be executed using the npm command.
+  "test" script:
+    This script is typically used for running tests. In this case, it's a placeholder script that echoes the 
+    message "Error: no test specified" and then exits with an error code of 1. It's a common convention to use 
+    this placeholder script when no specific testing logic has been defined for a project.
+    #)To start your application using nodemon, you can run: npm start or npm run start.
+    #)To execute the test script, you can run: npm test or npm run test.
+
+
+
+
+=====================================>during mysql connection setup:
+host property:
+
+-->host property:
+# The host property specifies the hostname of the MySQL server to which you want to connect. In your case, it's 
+set to 'localhost'. This means that the MySQL server is expected to be running on the same machine (the localhost)
+ where your Node.js application is running.
+# If your MySQL server is running on a different machine, you would provide the IP address
+ or domain name of that machine as the value for the host property. For example, if the MySQL server is on a
+  machine with IP address 192.168.1.100, you would set host: '192.168.1.100'.
+-->user property:
+# The user property specifies the MySQL user that your Node.js application will use to connect to the database. 
+In your case, it's set to 'root'. The 'root' user is a common default user in MySQL installations and often has 
+administrative privileges.
+# It's a good practice to create a dedicated user for your application with the minimum necessary permissions
+ rather than using the root user, especially in production environments. You can create a user in MySQL with the 
+ necessary privileges and use that user's credentials in your Node.js application.
+
+
+ con.connect((err)=>{
+
+ })
+ con.end((err)=>{
+
+ })
+ these two tell whethe connected and end connection there is error in code
+
+=====================================>about dotenv library
+The dotenv library in Node.js is a popular utility for
+ loading environment variables from a file named .env into
+  process.env. Environment variables are often used to 
+  store configuration settings, API keys, and other sensitive information
+   without hardcoding them directly in the code.
+ installations:npm install dotenv
+
+Creating a .env File:
+DATABASE_USER=root
+DATABASE_PASSWORD=your_password
+DATABASE=mydatabase
+DATABASE_HOST=localhost
+
+Loading Environment Variables:
+const dotenv = require('dotenv');
+dotenv.config();
+If your .env file is in a different location or has a 
+different name, you can specify the path when calling 
+config().
+
+
+Using Environment Variables:
+After loading the environment variables, you can access
+ them through the process.env object.
+
+ The dotenv library simplifies the process of managing environment variables, especially in development and testing environments. It's important to note that the .env file should not be committed to version control systems to avoid exposing sensitive information. Typically, a sample .env.example file is committed to the repository with placeholder values, and developers are instructed to create their own .env files based on that example.
+
+==============================>about app.set(name,value);
+In Express.js, the app.set() method is used to configure settings for an Express application. This method allows you to 
+customize various aspects of your application, such as the view engine, port number, environment, and other settings.
+ Here's a detailed explanation of how app.set() works:
+#) name: A string that specifies the name of the setting you want to configure.
+#) value: The value you want to assign to the specified setting.
+1--->View Engine Configuration:
+app.set('view engine', 'hbs');
+This line sets the view engine to Handlebars (hbs). 
+This is used for rendering dynamic content in views.
+2--->Views Directory:
+app.set('views', path.join(__dirname, 'views'));
+Specifies the directory where your application's views (templates) are stored. In this example, the views are expected to be in the "views" directory of your application.
+3--->Port Configuration:
+app.set('port', process.env.PORT || 3000);
+Sets the port number for the application. It uses the value of the PORT environment variable if available, or defaults to port 3000.
+4--->Environment Setting:
+app.set('env', 'development');
+Sets the environment for the application. The default is 'development', but you can set it to 'production' or any 
+other environment
+=====================>what is templating engine
+A templating engine is a software module or component that allows developers to embed dynamic content within static markup, facilitating the creation of dynamic web pages or documents
+The primary purpose of a templating engine is to separate the structure of a document from its content, enabling the dynamic generation of documents based on data or variables.
+In the context of web development, templating engines are commonly used to generate HTML, XML, or other markup languages by combining templates with data. These templates typically contain placeholders, variables, or expressions that are replaced with actual data during the rendering process.
+#)  Key characteristics of templating engines include:
+   1) Placeholder Syntax: Templating engines use a specific syntax to define placeholders within templates. This syntax allows developers to insert dynamic content or data into the template.
+
+   2)Dynamic Data Binding: Templating engines facilitate the binding of dynamic data to templates. Data is often provided to the templating engine during the rendering process, and the engine replaces placeholders with actual data values.
+
+   3)Logic and Control Structures: Many templating engines support basic logic and control structures, such as conditionals (if statements), loops, and partials (reuse of template fragments).
+
+   4)Separation of Concerns: Templating engines promote the separation of concerns by separating the logic (JavaScript code or data manipulation) from the presentation (markup and layout).
+
+============================>In web development, some popular templating engines include:
+  Handlebars.js: A simple and expressive templating engine that uses a syntax similar to Mustache but with additional features.
+  EJS (Embedded JavaScript): A templating engine that lets you embed JavaScript code directly within templates.
+  Pug (formerly Jade): A concise and elegant templating engine that uses indentation to define the structure of documents.
+  Mustache: A logic-less templating engine that can be used with various programming languages.
+  Twig: A templating engine for PHP that provides a clean syntax for creating templates.
+
+
+
+============================>example using the Handlebars.js :
+1)   npm install handlebars:
+2)   Create an HTML Template (index.hbs): note views is the default name that thwe handlear uses
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>{{pageTitle}}</title>
+      </head>
+      <body>
+          <h1>Hello, {{name}}!</h1>
+          <p>{{message}}</p>
+      </body>
+      </html>
+
+      In this template, {{pageTitle}}, {{name}}, and {{message}} are placeholders that will be replaced with actual data.
+3)  Node.js Script (app.js):
+    Now, let's create a Node.js script (app.js) to render the template using Handlebars:
+
+
+      const express = require('express');
+      const exphbs  = require('express-handlebars');
+      const app = express();
+      
+      // Set Handlebars as the view engine
+      app.engine('hbs', exphbs());
+      app.set('view engine', 'hbs');
+      // Define a route to render the template
+      
+      app.get('/', (req, res) => {
+          // Data to be rendered in the template
+          const data = {
+              pageTitle: 'Handlebars Example',
+              name: 'John',
+              message: 'Welcome to Handlebars.js!'
+          };
+      
+          // Render the 'index' template with the provided data
+
+          //The resp.render() method expects the second argument to be an object where the keys are the variable //names used in your Handlebars template and the values are the data you want to pass.
+          res.render('index', data);
+      });
+      
+      // Start the server
+      const port = process.env.PORT || 3000;
+      app.listen(port)
+
+
+
+
+
+
+
+
+============>about hbs templating engine for javascript
+Handlebars simplifies the process of creating dynamic HTML
+by separating the logic from the presentation. It's a 
+lightweight and easy-to-understand templating engine,
+making it a popular choice for web developers. Keep in 
+mind that there are various other templating engines available
+in the JavaScript ecosystem, and the choice often depends on personal preference
+ and project requirements.
+
+
+=======================>about body parser:
+
+In Express.js, both express.json() and body-parser middleware can be used to handle incoming request data, specifically parsing the request body. However, there are some differences between them, and as of Express.js version 4.16.0 and later, express.json() is included by default, eliminating the need for the body-parser library in many cases.
+
+    1)Included Middleware:
+
+    express.json(): Starting from Express.js version 4.16.0, express.json() is included as part of the Express.js core.It is used to parse JSON-encoded request bodies.
+    body-parser: Before version 4.16.0, body-parser was aseparate module that developers had to install and requireexplicitly. It provided middleware for parsing varioustypes of request bodies, including JSON and URL-encodeddata. 
+    2)Middleware Configuration:
+
+    express.json(): It is a middleware function that is included with Express. You use it by calling app.use(express.json()).
+    body-parser: You need to install and require the body-parser library explicitly, and then use it in your application by calling app.use(bodyParser.json()) for JSON parsing and app.use(bodyParser.urlencoded({ extended: true })) for URL-encoded data.
+
+================>what to use app.use(express.json()) or app.use(express.urlencoded({extended:true}))
+
+
+
+
+================>what is phpmyadmin used for
+
+======================>difference between 
+con.query('select email from user where email =?',data,async (error,result)=>{})
+and
+con.query('select email from user where email =?',[data],async (error,result)=>{})
+
+
+The difference between the two code snippets lies in how the data parameter is passed to the con.query method.
+in case 1) You are passing the data variable directly as a parameter to the con.query method. In this case, the data variable is expected to be a single value, and it will be used to replace the ? placeholder in the SQL query.
+in case 2) You are passing an array containing the data variable as a single element. In this case, it's still treated as a single value, but wrapping it in an array is a common practice when you need to pass multiple values to replace multiple placeholders in the SQL query.
+ thus :
+ 
+ ----->In summary, the difference is more relevant when dealing with multiple placeholders, and using an array is a common practice for passing values when you have more than one placeholder in your SQL query.
+
+
+=====================>to encrypt password we need to install bcryptjs
+======>we will also need to install cokies parser so we do npm i cookie-parse 
+and also jsonwebtoken
+
+=====================>router movement:
+app.use('/', require('./routes/pages'));
+app.use('/auth', require('./routes/auth'));
+
+When you access localhost:5000/auth/register, it matches both the / route and the /auth route. However, the first matching route is the / route because it is defined first. As a result, it goes to ./routes/pages, and the /auth/register route in ./routes/auth is not reached.
+
+To fix this issue and ensure that more specific routes are matched first, you can reorder your route definitions in app.js:
+
+app.use('/auth', require('./routes/auth'));
+app.use('/', require('./routes/pages'));
+
+
+
+
+

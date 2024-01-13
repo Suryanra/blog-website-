@@ -1,0 +1,76 @@
+body{
+      background-color: rgb(255, 255, 255);
+
+}
+.container{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      /* justify-items: center; */
+      align-items: center;
+      height:100vh;
+}
+.nav{
+      width:90vw;
+      background-color: black;
+      display: flex;
+      align-items: end;
+      color:white;
+      justify-content:end;
+      /* gap:5px; */
+}
+.nav div{
+      background-color: rgba(52, 126, 191, 0.372);
+      padding:10px;
+      padding-left:20px ;
+      padding-right:20px ;
+}
+.nav div a{
+      text-decoration: none;
+      color:white;
+}
+.nav div:hover{
+      background-color: rgba(27, 135, 231, 0.934);
+}
+form{
+      display: flex;
+      flex-direction: column;
+      column-gap: 15px;
+      width:80vw;
+      height:70vh;
+      justify-content: space-evenly;
+      padding:20px;
+}
+form div input{
+      height:40px;
+      width:100%;
+      background-color: bisque;
+      border:2px solid rgba(9, 10, 7, 0.416);
+      border-radius: 20px;
+      padding-left: 20px;
+}
+form div input:focus{
+      background-color: rgba(9, 10, 7, 0.416);;
+}
+
+
+button{
+      width:200px;
+      height: 40px;;
+      background-color: rgba(58, 58, 206, 0.824);
+}
+.alert{
+      width:80vw;
+      background-color: black;
+      display: flex;
+      color:rgb(169, 75, 75);
+      font-size: 30px;
+      /* text-align: center; */
+      /* justify-content: center */
+      padding-left: 20px;
+}
+.fa-solid{
+      font-size: 20px;
+      color:black;
+      margin:10px;
+}

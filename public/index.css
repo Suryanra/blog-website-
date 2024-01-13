@@ -1,0 +1,77 @@
+body{
+      /* background-color: orange; */
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+}
+.container{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      /* justify-items: center; */
+      align-items: center;
+}
+.nav{
+      width:90vw;
+      background-color: black;
+      display: flex;
+      align-items: end;
+      color:white;
+      justify-content:end;
+      
+      /* gap:5px; */
+}
+.nav div{
+      
+      background-color: rgba(52, 126, 191, 0.372);
+      padding:10px;
+      padding-left:20px ;
+      padding-right:20px ;
+}
+.nav div a{
+      text-decoration: none;
+      color:white;
+}
+a:active {
+  color: #020002; /* Purple color for active link */
+}
+.nav div:hover{
+      background-color: rgba(27, 135, 231, 0.934);
+}
+.contentbox{
+      width:90vw;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(84, 84, 84);
+      padding:20px;
+      height:400px;
+      font-size: 25px;
+      /* background-image: linear-gradient(to right ,rgb(7, 47, 248),rgb(28, 106, 155),rgb(36, 200, 118)); */
+      
+}
+
+.contentbox div:nth-child(1){
+      font-size: 5rem;
+      background-image:linear-gradient(to right,white,green 10%,rgb(253, 253, 253) 30%,yellow 50%);
+      -webkit-background-clip:text;
+      color:rgba(255, 255, 255, 0);
+      
+      
+}
+.underline{
+      text-decoration: underline;
+}
+.tagline{
+      font-size: 20px;
+      background-image:linear-gradient(to right,white,rgb(132, 36, 126) 10%,rgb(253, 253, 253) 30%,yellow 50%,red);
+      -webkit-background-clip:text;
+      color:rgba(255, 255, 255, 0);
+      font-size: 35px;
+}
+button{
+      width:200px;
+      height:50px;
+      align-self: end;
+      margin-top: 40px;;
+      background-color: rgba(58, 58, 206, 0.824);
+}

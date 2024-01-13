@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <h1>
+
+      </h1>
+<script>
+const text=document.querySelector('h1')
+text.innerText='#'+Math.floor(Math.random()* 0xffffff).toString(16);
+// 16 passed to represent that number is hexadecimal number 
+document.body.style.backgroundColor="#"+Math.floor(Math.random()* 0xffffff);
+</script>
+</body>
+</html>

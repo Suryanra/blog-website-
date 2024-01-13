@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <h1>
+
+      </h1>
+<script>
+
+      // console.log good way
+foo={name:"surya", age:"20", year:"2nd year"};
+boo={name:"surya", age:"20", year:"2nd year"};
+coo={name:"surya", age:"20", year:"2nd year"};
+
+// bad
+console.log(foo);
+console.log(boo);
+console.log(coo);
+// good
+console.log({foo,boo,coo});
+console.table([foo,boo,coo]);
+
+// reduce map filter
+const data=[1,2,6,9,90,43,4,78,100,123,321,345]
+const sum=data.reduce((acc,ele)=>acc+ele)
+console.log(sum)
+const mapped=data.map((ele)=>ele+1)
+console.log(mapped)
+const filtered=data.filter((ele)=>ele>100)
+console.log(filtered)
+const sorte=data.sort((a,z)=>a+z)
+// a-z:ascending
+// z-a:desceding
+console.log("sort",sorte)
+
+
+// hasEvens=>some
+function hasEvens(arr){
+      return arr.some((num)=>num-0<0)
+}
+
+// hasall=>every
+function hasall(arr){
+      return arr.every((num)=>num-0>0)
+}
+console.log(hasEvens(data));
+console.log(hasall(data));
+
+
+// filter taking item and index
+
+const item=data.filter((item,index)=>item<index)
+console.log(item)
+
+
+// filter can be used to filtered out unique element
+const item2unique=data.filter((item,index)=>data.indexOf(item)===index)
+console.log(item2unique)
+
+// you can use set
+const uniquecollection=[...new Set(data)];
+console.log(uniquecollection)
+
+
+// desctructing an array=>it will be good if you know the structure of the array
+const myname=["surya","pratap","singh"]
+const [first,second,last]=myname;
+console.log(first,second,last);
+const [first1,...rest]=myname;
+console.log(first,rest);
+
+const myskill=["html","css","java","react","nodejs"]
+
+// desctructing an object=>very helpfull
+const person={
+      name:"surya",
+      age:20,
+      skill:"html css react nodejs react "
+}
+
+const {skill}=person;
+console.log(skill)
+
+// we can rename the properties name of objecvt during destructing:
+
+const {skill:newskill}=person;
+console.log(newskill)
+// console.log(skill) after renameing previous name of propertiex=s will not be used
+
+
+
+// array fill initiallise
+const arr=Array.from({length:3},()=>0)
+// in from first argument {length:3} this tells that we going to create ann array of length 3
+// second arrgumnet is mapping function 
+console.log(arr)
+const arr1=Array.from({length:3},(item,index)=>index)
+console.log(arr1)
+</script>
+</body>
+</html>

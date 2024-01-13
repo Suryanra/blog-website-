@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            body{
+                  font-family: arial;
+                  font-size:16px;
+                  margin:0;
+                  background-color: grey;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  /* background:linear-gradient(to right bottom,rgb(244, 244, 244) 50% ,rgb(75, 63, 63) 30%,black 20%); */
+            }
+            .tilt-box-wrap{
+                  width:400px;
+                  height: 400px;
+                  background-color: aqua;
+                  position: relative;
+                  transition: all 0.6s ease-out;
+                  perspective: 1000px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+            .tilt-box-wrap:hover{
+                  transition: all 0.3s linear;
+                  transform: scale(1.1);
+            }
+            .tilt-box{
+                  width:100%;
+                  height: 100%;
+                  background-color: rgb(239, 239, 239);
+                  position: relative;
+                  transition: all 0.6s ease-out;
+                  perspective: 1000px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  transform: rotateX(0deg) rotateY(0deg);
+                  perspective: 1000px;
+                  transform-style: preserve-3d;
+            }
+            .tilt-box strong{
+                  transform: translateZ(40px);
+            }
+
+      </style>
+</head>
+<body>
+<div class="container">
+      <div class="tilt-box-wrap">
+            <div class="tilt-box">
+                  <strong>tilt<br>effect</strong>
+            </div>
+      </div>
+</div>
+</body>
+</html>

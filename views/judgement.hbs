@@ -1,0 +1,98 @@
+{{!-- all judgement box --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="judgement.css"></link>
+</head>
+<body>
+      <div class="nav">
+            <div><i class="fa-solid fa-magnifying-glass"></i></a></div>
+            <div><a href="/">HOME</a></div>
+            <div><a href="/auth/profile">Profile</a></div>
+            <div id="showhideform"><i class="fa-brands fa-rocketchat"></i></div>
+      </div>
+<div class="judgement-create" id="judgement-create">
+    <form action="/auth/tweet" method="post">
+      <div id="quote"></div>
+        <div><input type="text" name="about" placeholder="what you are going to talk about" maxlength="50" required></div>
+        <div><textarea name="content" maxlength="500" cols="30" rows="10" required></textarea></div>
+        <div><input type="text" name="tag" placeholder="Tag" maxlength="30" required></div>
+        {{!-- <div><input type="text" name="writtenby" value="surya pratap singh" required style="visibility:hidden"></div>
+        <div><input type="email" name="emailby" value="surya@gmail.com" required style="visibility:hidden"></div> --}}
+        <button id="sharebtn" type="submit">Share it</button>
+    </form>
+</div>
+      <div class="container" id="container">
+      <div class="card">
+            <div class="about">2nd year surya pratap singh.</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolores nostrum ipsum necessitatibus tempore dicta accusamus esse quos, et vero sunt minima perspiciatis architecto. Optio sapiente assumenda aspernatur minus nostrum?</div>
+            <div class="postedby">
+            <div>Lorem, ipsum dolor.</div>
+            <div><button><i class="fa-regular fa-thumbs-up"></i></button>
+            <button><i class="fa-regular fa-thumbs-down"></i></button></div>
+                  </div>
+      </div>
+      {{!-- <div class="card">
+            <div class="about">2nd year surya pratap singh.</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolores nostrum ipsum necessitatibus tempore dicta accusamus esse quos, et vero sunt minima perspiciatis architecto. Optio sapiente assumenda aspernatur minus nostrum?</div>
+            <div class="postedby">
+            <div>Lorem, ipsum dolor.</div>
+            <div><button><i class="fa-regular fa-thumbs-up"></i></button>
+            <button><i class="fa-regular fa-thumbs-down"></i></button></div>
+                  </div>
+      </div>
+      <div class="card">
+            <div class="about">2nd year surya pratap singh.</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolores nostrum ipsum necessitatibus tempore dicta accusamus esse quos, et vero sunt minima perspiciatis architecto. Optio sapiente assumenda aspernatur minus nostrum?</div>
+            <div class="postedby">
+            <div>Lorem, ipsum dolor.</div>
+            <div><button><i class="fa-regular fa-thumbs-up"></i></button>
+            <button><i class="fa-regular fa-thumbs-down"></i></button></div>
+            </div>
+      </div> --}}
+      {{!-- <div class="card">
+            <div class="about">2nd year surya pratap singh.</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolores nostrum ipsum necessitatibus tempore dicta accusamus esse quos, et vero sunt minima perspiciatis architecto. Optio sapiente assumenda aspernatur minus nostrum?</div>
+            <div class="postedby">
+            <div>Lorem, ipsum dolor.</div>
+            <div><button><i class="fa-regular fa-thumbs-up"></i></button>
+            <button><i class="fa-regular fa-thumbs-down"></i></button></div>
+                  </div>
+      </div>
+      <div class="card">
+            <div class="about">2nd year surya pratap singh.</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolores nostrum ipsum necessitatibus tempore dicta accusamus esse quos, et vero sunt minima perspiciatis architecto. Optio sapiente assumenda aspernatur minus nostrum?</div>
+            <div class="postedby">
+            <div>Lorem, ipsum dolor.</div>
+            <div><button><i class="fa-regular fa-thumbs-up"></i></button>
+            <button><i class="fa-regular fa-thumbs-down"></i></button></div>
+                  </div>
+      </div>
+      <div class="card">
+            <div class="about">2nd year surya pratap singh.</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolores nostrum ipsum necessitatibus tempore dicta accusamus esse quos, et vero sunt minima perspiciatis architecto. Optio sapiente assumenda aspernatur minus nostrum?</div>
+            <div class="postedby">
+            <div>Lorem, ipsum dolor.</div>
+            <div><button><i class="fa-regular fa-thumbs-up"></i></button>
+            <button><i class="fa-regular fa-thumbs-down"></i></button></div>
+                  </div>
+      </div>
+      <div class="card">
+            <div class="about">2nd year surya pratap singh.</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolores nostrum ipsum necessitatibus tempore dicta accusamus esse quos, et vero sunt minima perspiciatis architecto. Optio sapiente assumenda aspernatur minus nostrum?</div>
+            <div class="postedby">
+            <div>Lorem, ipsum dolor.</div>
+            <div><button><i class="fa-regular fa-thumbs-up"></i></button>
+            <button><i class="fa-regular fa-thumbs-down"></i></button></div>
+                  </div>
+      </div> --}}
+      
+      </div>
+      
+<script src="https://kit.fontawesome.com/3a5d1138c9.js" crossorigin="anonymous"></script>
+<script src="judgement.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body{e
+      background-color: #5865f2;
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-evenly;
+}
+.nav{
+      width:100vw;
+      background-color: black;
+      display: flex;
+      align-items: end;
+      color:white;
+      justify-content:end;
+      position: fixed;
+}
+.nav div{
+      background-color: rgba(34, 36, 37, 0.372);
+      padding:10px;
+      padding-left:20px ;
+      padding-right:20px ;
+      box-sizing: border-box;
+}
+
+
+.nav div a{
+      text-decoration: none;
+      color:white;
+      padding:10px;
+}
+a:active {
+  color: #020002; /* Purple color for active link */
+}
+.nav div:hover{
+      background-color: rgba(27, 135, 231, 0.934);
+}
+
+#showhideform{
+      background-image: linear-gradient(red,green,yellow);
+      width:100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+}
+.fa-rocketchat {
+      animation: animate 1s infinite;
+}
+@keyframes animate {
+
+0% {scale: 1.1;}
+50% {scale: 1.6;}
+100% {scale: 1.1;}
+}
+
+.judgement-create{
+      position: absolute;
+      z-index: 2;
+      width:400px;
+      height:500px;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      background-color: #020002;
+      box-sizing: border-box;
+      visibility: hidden;
+}
+.judgement-create>form{
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width:100%;
+      height:100%;
+      padding:15px;
+      border:2px solid rgb(2, 0, 0);
+      background-color: aliceblue;
+      box-sizing: border-box;
+}
+#sharebtn{
+      background-color: #474fa5;
+      padding:5px;
+      width:102%
+}
+form > div>input{
+      width:100%;
+      height:50px;
+}
+.judgement-create> textarea{
+      width:500px;
+      /* height:200px; */
+
+}
+
+
+
+
+.container{
+      margin-top: 40px;
+      /* padding-top: 30px; */
+      display:flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      row-gap: 10px;;
+      background-color: aliceblue;
+}
+.card{
+      max-width:600px;
+      background-color: rgba(240, 248, 255, 0);
+      border:2px solid rgba(0, 0, 0, 0.582);
+border-radius: 10px;
+      
+      
+}
+.card:hover{
+      box-shadow: 2px 3px 4px black;
+      transform: scale(1.01);
+}
+#quote{
+background-image:linear-gradient(to right,#d21010,rgb(0, 0, 0),rgb(0, 0, 0) 10%,rgb(0, 0, 0),rgb(255, 0, 0) 50%,rgb(0, 0, 0),aqua);
+-webkit-background-clip:text;
+color:rgba(255, 255, 255, 0);
+
+}
+.about{
+width:100%;
+display: flex;
+justify-content: center;
+padding:15px;
+box-sizing: border-box;
+border-bottom: 1px solid white;
+font-size: 1.2rem;
+font-family: "Times New Roman", Times, serif;
+}
+.content{
+      width:100%;
+      box-sizing: border-box;
+      padding: 15px;
+      background-color: rgba(19, 11, 2, 0.475);
+      font-family: cursive;
+}
+.postedby{
+border-top:1px solid rgb(255, 255, 255);
+width:100%;
+display: flex;
+align-items: end;
+flex-direction: column;
+padding:10px;
+box-sizing: border-box;
+padding:10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.postedby button{
+      box-sizing: border-box;
+      width:45px;
+      height:45px;
+      border-radius: 50%;
+
+}

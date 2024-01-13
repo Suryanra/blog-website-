@@ -1,0 +1,26 @@
+[
+  {
+    id: 1,
+    name: 'amit singh',
+    email: 'amit@gmail.com',
+    password: 'amitanshu'
+  },
+  {
+    id: 2,
+    name: 'surya pratap singh',
+    email: 'suryapratapnra@gmail.com',
+    password: '$2a$08$9Zj/bvFm3yhFbqbNNBzWneiKwMwWFUo/S5XWseqIivU9V/oCL22I6'
+  },
+  {
+    id: 3,
+    name: 'surya pratap singh',
+    email: 'surya@gmail.com',
+    password: '$2a$08$hcujpjjwNHL6zTRvheoAJ.gtt/iXlB475gYx8jcKaLt3/fkZSTQIu'
+  },
+  {
+    id: 4,
+    name: 'surya pratap singh',
+    email: '112215180@cse.iiitp.ac.in',
+    password: '$2a$08$HMrWZ6hqg7NeV07jDGzeFO.4KJ9Iu09stvGvl7fjXoU9vrCTh.Ik.'
+  }
+]

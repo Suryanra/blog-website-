@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            body{
+                  padding:0;
+                  margin:0;
+                  box-sizing: border-box;
+            }
+            .container{
+            width:100vw;
+            height:100vh;
+            background-color: black;
+            border:5px solid white;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            }
+            .card{
+                  width:400px;
+                  height:200px;
+                  background-color: white;
+                  display: flex;
+                  justify-content: center;
+                  transition: 0.3s;
+                  border-radius: 10px;
+            }
+            .imagediv{
+                  background-color: red;
+                  width:250px;
+                  height:150px;
+                  position: absolute;
+                  transition: 0.3s;
+                  border-radius: 20px;
+                  box-shadow: 0px 4px 20px 10px black;
+                  transform: translateY(-20px);
+                  background-image: url(image/computer.jpg);
+                  background-size: cover;            }
+            .textdiv{
+                  background-color: white;
+                  height:0%;
+                  width:100%;
+                  display: flex;
+                  align-items:center;
+                  justify-content:center ;
+                  flex-direction: column;
+                  font-style:bold;
+                  padding:15px;
+                  visibility: hidden;
+                  transition: 0.3s;
+                  border-radius: 10px;
+            }
+            .textdiv div:nth-child(1){
+                  width:100%;
+                  height:300px;
+                  background-color: brown;
+                  border-radius: 10px 10px 50% 50%;
+                  position: relative;
+            }
+            .textdiv div:nth-child(4){
+                  /* top:0; */
+                  background-color: rgb(233, 19, 19);
+                  
+                  width: 100%;
+                  height:2rem;
+                  border-radius: 20px;
+                  display: flex;
+                  text-align: center;
+                  justify-content: center;
+            }
+            .card:hover {
+                  height:250px;
+                  border-radius: 10px;
+            }
+            .card:hover .textdiv{
+                  height:100%;
+                  visibility: visible;
+            }
+            .card:hover .imagediv{
+                  transition-delay: 0.5s;
+                  transform: translateY(-100px);
+            }
+      </style>
+</head>
+<body>
+      <div class="container">
+            <div class="card">
+                  <div class="imagediv" style="background-image: url(image/computer.jpg);"></div>
+                  <div class="textdiv">
+                        <div class="banner"></div>
+                        <div><h1>keep smiling</h1></div>
+                        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, iusto!</div>
+                        <div>language used:html css javascripts</div>
+                  </div>
+            </div>
+            <div class="card">
+                  <div class="imagediv" style="background-image: url(image/spider.jpg);"></div>
+                  <div class="textdiv"></div>
+            </div>
+            <div class="card">
+                  <div class="imagediv" style="background-image: url(image/computer1.jpeg);"></div>
+                  <div class="textdiv"></div>
+            </div>
+      </div>
+</body>
+</body>
+</html>

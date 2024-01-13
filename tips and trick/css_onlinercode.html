@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            body{
+                  display: flex;
+                  margin-left:5px;
+                  column-gap:35px;
+                  row-gap: 10px;
+                  flex-wrap: wrap;
+            }
+            html{
+                  scroll-behavior: smooth;
+            }
+.card{
+      /* margin:10px; */
+      width:200px;
+      height:300px;
+      background-color: grey;
+      padding:10px;
+      display: flex;
+}
+.card h1{
+      writing-mode:vertical-lr;
+}
+.container{
+      width:100vw;
+      height:20rem;
+      background-color: yellow;
+      display: flex;
+      flex-wrap: nowrap;
+      border:1px solid black;
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      resize: both;
+}
+
+.container div{
+      MIN-width:100%;
+      height:100%;
+      /* display:inline-block; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: center;
+}
+
+.container div:nth-child(1){ background-color: grey;}
+.container div:nth-child(2){ background-color: rgb(255, 0, 0);}
+.container div:nth-child(3){ background-color: rgb(0, 0, 0);}
+.container div:nth-child(4){ background-color: rgb(31, 252, 49);}
+.container div:nth-child(5){ background-color: rgb(234, 0, 255);}
+
+.container2{
+width:100vw;
+height:50vh;
+/* background-image: linear-gradient(to right ,rgb(7, 47, 248),rgb(28, 106, 155),rgb(36, 200, 118)); */
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 10rem;
+font-style: bold;
+-webkit-background-clip:text;
+/* it will make background to background of text */
+color:rgba(255, 255, 255, 0);
+/* make text transparent so that background is become invisible */
+background-image: linear-gradient(to right ,rgb(7, 47, 248),rgb(28, 106, 155),rgb(36, 200, 118));
+
+}
+
+
+</style>
+</head>
+<body>
+      <a href="#hello">hi</a>
+      <div class="card">
+            <h1>smilae pls</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim inventore fugiat nisi corporis autem perferendis repellendus nemo amet quaerat.</p>
+      </div>
+      <div class="card">
+            <h1>smilae pls</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim inventore fugiat nisi corporis autem perferendis repellendus nemo amet quaerat.</p>
+      </div>
+      <div class="card">
+            <h1>smilae pls</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim inventore fugiat nisi corporis autem perferendis repellendus nemo amet quaerat.</p>
+      </div>
+      <div class="card">
+            <h1>smilae pls</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim inventore fugiat nisi corporis autem perferendis repellendus nemo amet quaerat.</p>
+      </div>
+      <div class="card">
+            <h1>smilae pls</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim inventore fugiat nisi corporis autem perferendis repellendus nemo amet quaerat.</p>
+      </div>
+      <div class="card">
+            <h1>smilae pls</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim inventore fugiat nisi corporis autem perferendis repellendus nemo amet quaerat.</p>
+      </div>
+
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eius recusandae voluptatem nesciunt similique quidem itaque placeat est impedit aspernatur adipisci assumenda natus ipsa mollitia enim, dolorem voluptas cumque odit minus dolore earum. Dicta architecto voluptatibus quisquam maxime perferendis doloremque sunt possimus corporis. Delectus, non adipisci suscipit enim sapiente nihil voluptatibus commodi neque debitis voluptatum totam maxime consequatur inventore. Molestiae dicta sed eos. Perferendis possimus cupiditate nobis labore qui fugiat esse et itaque odio, non illo ad sed numquam quibusdam suscipit necessitatibus quaerat, sint tenetur mollitia similique ex nemo aspernatur ipsam. Expedita culpa saepe amet illo. Assumenda labore quam deleniti?</p>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eius recusandae voluptatem nesciunt similique quidem itaque placeat est impedit aspernatur adipisci assumenda natus ipsa mollitia enim, dolorem voluptas cumque odit minus dolore earum. Dicta architecto voluptatibus quisquam maxime perferendis doloremque sunt possimus corporis. Delectus, non adipisci suscipit enim sapiente nihil voluptatibus commodi neque debitis voluptatum totam maxime consequatur inventore. Molestiae dicta sed eos. Perferendis possimus cupiditate nobis labore qui fugiat esse et itaque odio, non illo ad sed numquam quibusdam suscipit necessitatibus quaerat, sint tenetur mollitia similique ex nemo aspernatur ipsam. Expedita culpa saepe amet illo. Assumenda labore quam deleniti?</h1>
+      <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eius recusandae voluptatem nesciunt similique quidem itaque placeat est impedit aspernatur adipisci assumenda natus ipsa mollitia enim, dolorem voluptas cumque odit minus dolore earum. Dicta architecto voluptatibus quisquam maxime perferendis doloremque sunt possimus corporis. Delectus, non adipisci suscipit enim sapiente nihil voluptatibus commodi neque debitis voluptatum totam maxime consequatur inventore. Molestiae dicta sed eos. Perferendis possimus cupiditate nobis labore qui fugiat esse et itaque odio, non illo ad sed numquam quibusdam suscipit necessitatibus quaerat, sint tenetur mollitia similique ex nemo aspernatur ipsam. Expedita culpa saepe amet illo. Assumenda labore quam deleniti?</h5>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eius recusandae voluptatem nesciunt similique quidem itaque placeat est impedit aspernatur adipisci assumenda natus ipsa mollitia enim, dolorem voluptas cumque odit minus dolore earum. Dicta architecto voluptatibus quisquam maxime perferendis doloremque sunt possimus corporis. Delectus, non adipisci suscipit enim sapiente nihil voluptatibus commodi neque debitis voluptatum totam maxime consequatur inventore. Molestiae dicta sed eos. Perferendis possimus cupiditate nobis labore qui fugiat esse et itaque odio, non illo ad sed numquam quibusdam suscipit necessitatibus quaerat, sint tenetur mollitia similique ex nemo aspernatur ipsam. Expedita culpa saepe amet illo. Assumenda labore quam deleniti?</h2>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eius recusandae voluptatem nesciunt similique quidem itaque placeat est impedit aspernatur adipisci assumenda natus ipsa mollitia enim, dolorem voluptas cumque odit minus dolore earum. Dicta architecto voluptatibus quisquam maxime perferendis doloremque sunt possimus corporis. Delectus, non adipisci suscipit enim sapiente nihil voluptatibus commodi neque debitis voluptatum totam maxime consequatur inventore. Molestiae dicta sed eos. Perferendis possimus cupiditate nobis labore qui fugiat esse et itaque odio, non illo ad sed numquam quibusdam suscipit necessitatibus quaerat, sint tenetur mollitia similique ex nemo aspernatur ipsam. Expedita culpa saepe amet illo. Assumenda labore quam deleniti?</h2>
+      <h2 id="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eius recusandae voluptatem nesciunt similique quidem itaque placeat est impedit aspernatur adipisci assumenda natus ipsa mollitia enim, dolorem voluptas cumque odit minus dolore earum. Dicta architecto voluptatibus quisquam maxime perferendis doloremque sunt possimus corporis. Delectus, non adipisci suscipit enim sapiente nihil voluptatibus commodi neque debitis voluptatum totam maxime consequatur inventore. Molestiae dicta sed eos. Perferendis possimus cupiditate nobis labore qui fugiat esse et itaque odio, non illo ad sed numquam quibusdam suscipit necessitatibus quaerat, sint tenetur mollitia similique ex nemo aspernatur ipsam. Expedita culpa saepe amet illo. Assumenda labore quam deleniti?</h2>
+      <div class="container">
+                  <div class="box1">1</div>
+                  <div class="box2">2</div>
+                  <div class="box3">3</div>
+                  <div class="box4">4</div>
+                  <div class="box5">5</div>
+      </div>
+
+
+<h1>linear gradint color to text</h1>
+<br>
+
+<div class="container2">
+SURYA PRATAP SINGH
+</div>
+
+
+
+
+
+</body>
+
+
+<!-- 
+      writing-mode:vertical-lr
+      gap:
+      row-gap:
+      column-gap:
+      to flip image:transform:scaleX(-1) or scale(-1)
+
+      html{
+            scroll-behavior: smooth;
+      }
+
+
+      snapping:
+            in container:
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory; or       scroll-snap-type: x proximity
+            in box inside:
+            scroll-snap-align: center;
+      resizing box 
+            resize: both;
+      we can wewbskit line clam to display only fixed line of article
+            -webkit-line-clamp:1;//will show onlin one line but you haavee to do overflow hidden
+            -webkit-box-orient:vertical
+            -overflow:hidden;
+      linear gradint on text
+            -webkit-background-clip:text;
+            color:rgba(255, 255, 255, 0);
+            background-image: linear-gradient(to right ,rgb(7, 47, 248),rgb(28, 106, 155),rgb(36, 200, 118));
+
+ -->
+</html>
